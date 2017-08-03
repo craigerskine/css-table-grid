@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Table Grid</title>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="table-grid.css" rel="stylesheet" />
+
+  <style>
+    body { padding: 3em 20px; }
+    h1,h2,h3,h4,h5,h6 { margin: 0 0 20px; }
+    p,ul,ol { margin: 0 0 20px; }
+    ul ul,ul ol,ol ol,ol ul { margin: 0; }
+    hr { margin: 0 0 19px; }
+    .container { max-width: 940px; }
+    .row-table > .col-cell > p { margin: 0 0 10px; padding: 10px; background: rgba(0,128,0,.2); }
+    .row-table > .col-cell:nth-child(even) > p { background: rgba(0,128,0,.1); }
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>CSS Table Grid</h1>
+      <p class="lead">Responsive, no floats, no clearfix, nest-able, super tiny. Renders faster than flex and has better browser support. Modified version of <a href="http://mdo.github.io/table-grid/">@mdo/table-grid</a> with more helper classes like spacing and nowrap options.</p>
+      <p class="text-center"><a href="https://github.com/craigerskine/css-table-grid" class="btn btn-default btn-lg"><i class="fa fa-fw fa-github"></i> Download</a></p>
+    </div>
+
+    <h4>Use <strong class="text-warning">any</strong> HTML: <code>.row-table &gt; .col-cell</code></h4>
+    <div class="row-table row-table-padded-xxs">
+      <div class="col-cell"><p>A cell</p></div>
+      <div class="col-cell"><p>Another cell</p></div>
+      <div class="col-cell"><p>As many as you want...</p></div>
+    </div>
+    <hr />
+
+    <h4>Equal width columns: <code>.row-table-fixed</code></h4>
+    <div class="row-table row-table-fixed row-table-padded-xxs">
+      <div class="col-cell"><p>A cell</p></div>
+      <div class="col-cell"><p>Another cell</p></div>
+      <div class="col-cell"><p>Add as much content as you want and the column will stay equal width to all the others in this table row...</p></div>
+    </div>
+    <hr />
+
+    <h4>Specific column widths: <code>.col-cell-[1-11]</code></h4>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+      <div class="col-cell col-cell-1"><p>1</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-2"><p>2</p></div>
+      <div class="col-cell col-cell-2"><p>2</p></div>
+      <div class="col-cell col-cell-2"><p>2</p></div>
+      <div class="col-cell col-cell-2"><p>2</p></div>
+      <div class="col-cell col-cell-2"><p>2</p></div>
+      <div class="col-cell col-cell-2"><p>2</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-3"><p>3</p></div>
+      <div class="col-cell col-cell-3"><p>3</p></div>
+      <div class="col-cell col-cell-3"><p>3</p></div>
+      <div class="col-cell col-cell-3"><p>3</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-4"><p>4</p></div>
+      <div class="col-cell col-cell-4"><p>4</p></div>
+      <div class="col-cell col-cell-4"><p>4</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-5"><p>5</p></div>
+      <div class="col-cell col-cell-7"><p>7</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-6"><p>6</p></div>
+      <div class="col-cell col-cell-6"><p>6</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell col-cell-8"><p>8</p></div>
+      <div class="col-cell col-cell-4"><p>4</p></div>
+    </div>
+    <div class="row-table row-table-padded-xxs text-center">
+      <div class="col-cell"><p>12</p></div>
+    </div>
+    <hr />
+
+    <h4>Easy vertical alignment: <code>.col-cell-[middle|bottom]</code></h4>
+    <div class="row-table row-table-fixed row-table-padded-xxs text-center" style="height: 150px;">
+      <div class="col-cell"><p>Top (default)</p></div>
+      <div class="col-cell col-cell-middle"><p>Middle</p></div>
+      <div class="col-cell col-cell-bottom"><p>Bottom</p></div>
+    </div>
+    <hr />
+
+    <h4>Nest-able</h4>
+    <div class="row-table row-table-padded-xxs">
+      <div class="col-cell">
+        <p>Cell</p>
+      </div>
+      <div class="col-cell">
+        <p>Cell</p>
+        <div class="row-table">
+          <div class="col-cell col-cell-4">
+            <p>Nested Cell [4]</p>
+          </div>
+          <div class="col-cell col-cell-8">
+            <p>Nested Cell [8]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <h4>Optional nowrap <code>.col-cell-nowrap</code></h4>
+    <p class="alert alert-warning">Be careful, this is not very responsive.</p>
+    <div class="row-table row-table-padded-xxs">
+      <div class="col-cell col-cell-nowrap">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, cupiditate, iste ipsa animi.</p>
+      </div>
+      <div class="col-cell">
+        <p>A shorter column that wraps because we want the other column to never wrap...</p>
+      </div>
+    </div>
+
+    <hr />
+    <h4>Break Points <code>.table-row-[lg|md|sm]</code></h4>
+    <p>By default the table will retain the columns at all resolutions. You can force columns to break at specific resolutions using simple classes.</p>
+    <div class="row-table row-table-lg row-table-padded-xxs">
+      <div class="col-cell">
+        <p class="text-center">Break @ 979</p>
+      </div>
+      <div class="col-cell col-cell-6">
+        <p class="text-center">Break @ 979</p>
+      </div>
+      <div class="col-cell">
+        <p class="text-center">Break @ 979</p>
+      </div>
+    </div>
+    <div class="row-table row-table-md row-table-padded-xxs">
+      <div class="col-cell">
+        <p class="text-center">Break @ 767</p>
+      </div>
+      <div class="col-cell">
+        <p class="text-center">Break @ 767</p>
+      </div>
+      <div class="col-cell col-cell-6">
+        <p class="text-center">Break @ 767</p>
+      </div>
+    </div>
+    <div class="row-table row-table-sm row-table-padded-xxs">
+      <div class="col-cell col-cell-6">
+        <p class="text-center">Break @ 479</p>
+      </div>
+      <div class="col-cell">
+        <p class="text-center">Break @ 479</p>
+      </div>
+      <div class="col-cell">
+        <p class="text-center">Break @ 479</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
