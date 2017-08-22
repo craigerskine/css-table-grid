@@ -1,17 +1,37 @@
-/* table grid */
+/* table */
 .row-table { margin: 0; padding: 0; width: 100%; display: table; list-style: none; }
-.row-table-fixed { table-layout: fixed; }
-.row-table .col-cell { margin: 0; padding: 0; display: table-cell; vertical-align: top; list-style: none; }
+
+/* cell */
+.row-table .col-cell { margin: 0; padding: 0; display: table-cell; vertical-align: top; list-style: none; direction: ltr; }
+
+/* vertical align */
 .row-table > .col-cell-middle { vertical-align: middle; }
 .row-table > .col-cell-bottom { vertical-align: bottom; }
 .row-table > .col-cell-nowrap { white-space: nowrap; }
-.row-table-padded-xxs > .col-cell { padding: 0 5px; }
-.row-table-padded-xs > .col-cell { padding: 0 10px; }
-.row-table-padded-sm > .col-cell { padding: 0 15px; }
-.row-table-padded-md > .col-cell { padding: 0 20px; }
-.row-table-padded-lg > .col-cell { padding: 0 25px; }
-.row-table-padded-xl > .col-cell { padding: 0 30px; }
-.row-table-padded-xxl > .col-cell { padding: 0 40px; }
+
+/* equal width cells */
+.row-table-fixed { table-layout: fixed; }
+
+/* rtl */
+.row-table-rtl { direction: rtl; }
+
+/* gutters */
+.row-table-gutter-xxs { margin-right: -5px; margin-left: -5px; }
+.row-table-gutter-xs { margin-right: -10px; margin-left: -10px; }
+.row-table-gutter-sm { margin-right: -15px; margin-left: -15px; }
+.row-table-gutter-md { margin-right: -20px; margin-left: -20px; }
+.row-table-gutter-lg { margin-right: -25px; margin-left: -25px; }
+.row-table-gutter-xl { margin-right: -30px; margin-left: -30px; }
+.row-table-gutter-xxl { margin-right: -40px; margin-left: -40px; }
+.row-table-gutter-xxs > .row-table > .col-cell { padding: 0 5px; }
+.row-table-gutter-xs > .row-table > .col-cell { padding: 0 10px; }
+.row-table-gutter-sm > .row-table > .col-cell { padding: 0 15px; }
+.row-table-gutter-md > .row-table > .col-cell { padding: 0 20px; }
+.row-table-gutter-lg > .row-table > .col-cell { padding: 0 25px; }
+.row-table-gutter-xl > .row-table > .col-cell { padding: 0 30px; }
+.row-table-gutter-xxl > .row-table > .col-cell { padding: 0 40px; }
+
+/* widths */
 .row-table .col-cell-1 { width: 8.333333%; }
 .row-table .col-cell-2 { width: 16.666667%; }
 .row-table .col-cell-3 { width: 25%; }
