@@ -52,6 +52,7 @@
 .row-table .col-cell-9 { width: 75%; }
 .row-table .col-cell-10 { width: 83.333333%; }
 .row-table .col-cell-11 { width: 91.666667%; }
+.row-table .col-cell-12 { width: 100%; }
 
 /* tablet landscape */
 @media only screen and (max-width: 979px){
